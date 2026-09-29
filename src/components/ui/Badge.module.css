@@ -1,0 +1,39 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-tag);
+  border-radius: 3px;
+  white-space: nowrap;
+
+  /* neutral chip (legacy .skill-tags span) */
+  color: var(--text-secondary);
+  background: var(--surface-tint);
+  border: 1px solid var(--border-tint);
+  padding: 3px 9px;
+}
+
+.label {
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+}
+
+.md {
+  font-size: var(--fs-label-sm);
+  letter-spacing: 1.5px;
+  padding: 4px 12px;
+}
+
+/* Colored version: any tone from styles/tones.css */
+.toned {
+  color: var(--tone-text, var(--tone));
+  background: rgba(var(--tone-rgb), 0.1);
+  border-color: rgba(var(--tone-rgb), 0.2);
+  letter-spacing: 1px;
+}
+
+.toned.label { letter-spacing: 1.5px; }
+
+.icon { line-height: 1; }

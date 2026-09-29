@@ -1,0 +1,93 @@
+/* ═══════════════════════════════════════════════════════════════
+   DESIGN TOKENS — copied verbatim from legacy/style.css (:root)
+   Change values here; never hard-code colors in components.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── CSS CUSTOM PROPERTIES ──────────────────────────────────── */
+:root {
+  --bg-primary:      #070709;
+  --bg-secondary:    #0d0d14;
+  --bg-card:         rgba(13, 17, 28, 0.85);
+  --bg-glass:        rgba(10, 14, 25, 0.6);
+
+  --blue-primary:    #1a6fff;
+  --blue-bright:     #3d8bff;
+  --blue-dim:        #0d3d8a;
+  --blue-glow:       rgba(26, 111, 255, 0.3);
+
+  --gold-primary:    #c9a227;
+  --gold-bright:     #f0c040;
+  --gold-dim:        #6b5311;
+  --gold-glow:       rgba(201, 162, 39, 0.25);
+
+  --text-primary:    #e8eaf2;
+  --text-secondary:  #8a90aa;
+  --text-muted:      #4a5070;
+  --text-accent:     #3d8bff;
+
+  --border-color:    rgba(26, 111, 255, 0.15);
+  --border-gold:     rgba(201, 162, 39, 0.2);
+  --border-bright:   rgba(26, 111, 255, 0.4);
+
+  --font-display:    'Exo 2', sans-serif;
+  --font-mono:       'Share Tech Mono', monospace;
+  --font-body:       'Rajdhani', sans-serif;
+
+  --radius-sm:       4px;
+  --radius-md:       8px;
+  --radius-lg:       16px;
+  --radius-xl:       24px;
+
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-med:  0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --shadow-blue:     0 0 30px rgba(26, 111, 255, 0.15), 0 8px 32px rgba(0,0,0,0.4);
+  --shadow-gold:     0 0 30px rgba(201, 162, 39, 0.1), 0 8px 32px rgba(0,0,0,0.4);
+  --glow-blue:       0 0 20px rgba(26, 111, 255, 0.5);
+  --glow-gold:       0 0 20px rgba(201, 162, 39, 0.5);
+
+  --nav-height:      70px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   EXTRACTED TOKENS — values that were repeated as hard-coded literals
+   throughout legacy/style.css, given names here. Nothing is new visually.
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+  /* Layout (legacy .container / .section / .section-header) */
+  --container-max:       1200px;
+  --container-gutter:    32px;
+  --section-padding:     120px;
+  --section-header-gap:  60px;
+
+  /* Type (legacy .section-title / .section-tag / mono labels) */
+  --fs-section-title:    clamp(28px, 4vw, 44px);
+  --fs-label:            13px;   /* mono labels, buttons */
+  --fs-label-sm:         11px;   /* filters, small buttons, progress values */
+  --fs-tag:              10px;   /* tags and badges */
+
+  /* Surfaces and lines used by chips, tracks and tags */
+  --surface-tint:        rgba(255, 255, 255, 0.04);
+  --border-tint:         rgba(255, 255, 255, 0.06);
+  --track:               rgba(255, 255, 255, 0.05);
+
+  /* The blue-to-gold brand gradient (section line, progress fill, scrollbar) */
+  --gradient-brand:      linear-gradient(90deg, var(--blue-primary), var(--gold-primary));
+
+  /* Accessibility: keyboard focus ring */
+  --focus-ring:          var(--blue-bright);
+}
+
+/* Responsive overrides (legacy: @media max-width 768px / 480px) */
+@media (max-width: 768px) {
+  :root {
+    --nav-height:       60px;
+    --container-gutter: 20px;
+    --section-padding:  80px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root { --fs-section-title: 26px; }
+}

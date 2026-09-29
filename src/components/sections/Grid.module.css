@@ -1,0 +1,20 @@
+/* Layout shared by the card-grid sections (skills, projects, certifications, learning). */
+.filters { margin-bottom: 48px; }
+
+.skills,
+.projects,
+.certs,
+.learning {
+  list-style: none;
+  display: grid;
+  gap: 24px;
+}
+
+.skills { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.projects { grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
+.certs { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+.learning { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+@media (max-width: 480px) {
+  .projects { grid-template-columns: 1fr; }
+}

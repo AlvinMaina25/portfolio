@@ -1,0 +1,38 @@
+/* ═══════════════════════════════════════════════════════════════
+   EFFECTS — shared @keyframes and motion rules used by more than one
+   component (hexDraw, pulse-dot, rotate-ring, ...). Ported from
+   legacy/style.css in Phase 3/7 together with the components that use them.
+   Every animation added here must also be covered by a
+   prefers-reduced-motion rule.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Reduced motion ────────────────────────────────────────────
+   Safety net for every animation and transition in the app: when the visitor's
+   system asks for reduced motion, effects finish instantly instead of playing.
+   Components with movement that is more than decoration (Reveal, ProgressBar)
+   additionally handle this themselves. Ambient effects (particles, cursor glow,
+   typing) check useReducedMotion() in JS. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Custom cursor ─────────────────────────────────────────────
+   CustomCursor sets data-custom-cursor on <html> ONLY while it is running (mouse-like pointer,
+   no reduced motion), so the native cursor is never hidden on touch devices or when the effect
+   is off (fixes the legacy `body { cursor: none }` bug). Text fields keep their I-beam. */
+html[data-custom-cursor] body,
+html[data-custom-cursor] a,
+html[data-custom-cursor] button,
+html[data-custom-cursor] label,
+html[data-custom-cursor] summary {
+  cursor: none;
+}

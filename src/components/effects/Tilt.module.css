@@ -1,0 +1,15 @@
+/* .root never moves: it receives the pointer and holds --tilt-x / --tilt-y (set by useTilt). */
+.root {
+  height: 100%; /* stay the same size as the card so grids don't shift */
+}
+
+/* .tilt is the part that rotates; the custom properties are inherited from .root */
+.tilt {
+  height: 100%;
+  transform: perspective(800px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  /* slow, smooth return when the pointer leaves */
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* quick follow while the pointer is on the card */
+.root[data-tilting] .tilt { transition: transform 0.12s ease-out; }

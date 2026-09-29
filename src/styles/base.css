@@ -1,0 +1,79 @@
+/* ═══════════════════════════════════════════════════════════════
+   BASE — reset and element defaults, ported from legacy/style.css
+   (RESET & BASE, SCROLLBAR). Component styles do NOT go here; they
+   live next to their component as Component.module.css.
+
+   Intentionally NOT ported yet:
+   - body { cursor: none }  -> arrives with CursorGlow (Phase 7), where it is
+     only applied when the custom cursor is actually active (fixes a legacy bug)
+   - body.loading           -> arrives with LoadingScreen (Phase 7)
+   ═══════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* Replaces the legacy JS smooth-scroll offset: anchor jumps land below the fixed nav */
+section[id] {
+  scroll-margin-top: calc(var(--nav-height) + 10px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--blue-dim);
+  color: var(--blue-bright);
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--blue-primary), var(--gold-primary));
+  border-radius: 2px;
+}
+
+/* ── Accessibility ─────────────────────────────────────────── */
+
+/* One visible focus style for every interactive element (keyboard users only).
+   Legacy only styled focus on form inputs. */
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Hide something visually but keep it for screen readers: className="sr-only" */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

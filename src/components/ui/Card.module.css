@@ -1,0 +1,28 @@
+.card {
+  position: relative;
+  /* Fill the grid cell (or its Reveal wrapper) so cards in one row have equal height */
+  height: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: all var(--transition-med);
+}
+
+.padded { padding: 28px; }
+
+/* Hover: lift + colored border and glow */
+.interactive:hover {
+  transform: translateY(var(--card-lift, -5px));
+}
+
+.blue.interactive:hover {
+  border-color: var(--border-bright);
+  box-shadow: var(--shadow-blue);
+}
+
+.gold.interactive:hover {
+  border-color: rgba(201, 162, 39, 0.3);
+  box-shadow: var(--shadow-gold);
+}

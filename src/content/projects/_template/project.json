@@ -1,0 +1,19 @@
+{
+  "title": "Aura Motors",
+  "description": "A full-stack automotive marketplace for browsing vehicles, viewing detailed listings, saving favorites, submitting inquiries, making reservations, and managing inventory through customer and admin dashboards.",
+  "category": "fullstack",
+  "technologies": [
+    "React",
+    "TypeScript",
+    "TanStack Start",
+    "TanStack Router",
+    "TanStack Query",
+    "Supabase",
+    "Tailwind CSS",
+    "React Hook Form",
+    "Zod"
+  ],
+  "status": "completed",
+  "featured": true,
+  "coverAlt": "Aura Motors automotive marketplace"
+}

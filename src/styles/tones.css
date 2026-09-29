@@ -1,0 +1,20 @@
+/* ═══════════════════════════════════════════════════════════════
+   TONES — the accent palette for categories, icons, badges and status.
+   Any element with data-tone="..." exposes:
+     --tone       the accent color (text / icon)
+     --tone-rgb   the same color as "r, g, b" so components can tint it:
+                  background: rgba(var(--tone-rgb), 0.1)
+     --tone-text  (optional) a lighter text variant; use var(--tone-text, var(--tone))
+   Values are the colors hard-coded in the legacy skill / project / cert / learning
+   styles. Add a tone here AND in the `Tone` type (src/types/index.ts).
+   ═══════════════════════════════════════════════════════════════ */
+
+[data-tone="blue"]   { --tone: var(--blue-bright); --tone-rgb: 26, 111, 255; }
+[data-tone="gold"]   { --tone: var(--gold-primary); --tone-rgb: 201, 162, 39; }
+[data-tone="red"]    { --tone: #ff5050; --tone-rgb: 255, 80, 80; --tone-text: #ff8080; }
+[data-tone="sky"]    { --tone: #64c8ff; --tone-rgb: 100, 200, 255; }
+[data-tone="purple"] { --tone: #a064ff; --tone-rgb: 160, 100, 255; }
+[data-tone="teal"]   { --tone: #1adcb4; --tone-rgb: 26, 220, 180; }
+[data-tone="orange"] { --tone: #ff9632; --tone-rgb: 255, 150, 50; }
+[data-tone="green"]  { --tone: #50ff78; --tone-rgb: 80, 255, 120; }
+[data-tone="mint"]   { --tone: #26e87a; --tone-rgb: 38, 232, 122; }

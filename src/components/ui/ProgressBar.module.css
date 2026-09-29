@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.track {
+  flex: 1;
+  background: var(--track);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.sm { height: 3px; }
+.md { height: 4px; }
+
+.fill {
+  height: 100%;
+  background: var(--gradient-brand);
+  border-radius: 2px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label-sm);
+  /* legacy used --text-muted here (about 2.5:1 contrast); secondary keeps the number readable */
+  color: var(--text-secondary);
+  min-width: 36px;
+  text-align: right;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fill { transition: none; }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Cybersecurity Lab",
+  "description": "A virtualized penetration-testing lab on self-hosted infrastructure, with attack-and-defend scenarios, vulnerability scanning, log aggregation and threat-detection dashboards.",
+  "category": "security",
+  "technologies": [
+    "Kali Linux",
+    "Python",
+    "Metasploit",
+    "Splunk",
+    "VirtualBox"
+  ],
+  "order": 30,
+  "liveUrl": "https://transcendent-sprinkles-230647.netlify.app/",
+  "liveLabel": "Case Study"
+}

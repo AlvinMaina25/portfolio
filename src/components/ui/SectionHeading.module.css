@@ -1,0 +1,28 @@
+.heading {
+  margin-bottom: var(--section-header-gap);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  color: var(--blue-bright);
+  letter-spacing: 2px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--fs-section-title);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.line {
+  width: 60px;
+  height: 2px;
+  background: var(--gradient-brand);
+  margin-top: 8px;
+}

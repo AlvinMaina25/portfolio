@@ -1,0 +1,13 @@
+{
+  "title": "Cloud Deploy System",
+  "description": "A deployment automation setup that builds Docker containers, runs GitHub Actions CI/CD pipelines and provisions AWS infrastructure with Terraform.",
+  "category": "cloud",
+  "technologies": [
+    "AWS",
+    "Docker",
+    "Terraform",
+    "GitHub Actions",
+    "Bash"
+  ],
+  "order": 50
+}

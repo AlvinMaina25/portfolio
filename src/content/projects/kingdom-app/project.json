@@ -1,0 +1,14 @@
+{
+  "title": "Kingdom App",
+  "description": "A mobile and web app for a spiritual community, built with Flutter and Firebase. It supports real-time messaging, event management, media streaming and role-based access control.",
+  "category": "fullstack",
+  "technologies": [
+    "Flutter",
+    "Firebase",
+    "Dart",
+    "Node.js",
+    "Firestore"
+  ],
+  "order": 10,
+  "liveUrl": "https://easytenancy-7ddf4.web.app"
+}

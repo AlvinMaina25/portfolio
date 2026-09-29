@@ -1,0 +1,5 @@
+.number { position: absolute; top: 16px; right: 20px; font-family: var(--font-mono); font-size: var(--fs-label-sm); letter-spacing: 2px; color: var(--text-muted); }
+.icon { color: var(--tone); margin-bottom: 16px; }
+.title { font-family: var(--font-display); font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+.desc { font-size: 14px; line-height: 1.6; color: var(--text-secondary); margin-bottom: 18px; }
+.resources { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }

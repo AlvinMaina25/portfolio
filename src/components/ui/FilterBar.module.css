@@ -1,0 +1,32 @@
+.bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label-sm);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /* legacy used --text-muted (about 2.5:1 contrast); secondary passes WCAG AA */
+  color: var(--text-secondary);
+  padding: 7px 18px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.blue .filter:hover,
+.blue .filter[aria-pressed="true"] {
+  color: var(--blue-bright);
+  border-color: var(--blue-primary);
+  background: rgba(26, 111, 255, 0.08);
+}
+
+.gold .filter:hover,
+.gold .filter[aria-pressed="true"] {
+  color: var(--gold-bright);
+  border-color: var(--gold-primary);
+  background: rgba(201, 162, 39, 0.07);
+}

@@ -1,0 +1,10 @@
+.section {
+  position: relative;
+  z-index: 1; /* sits above the fixed particle canvas */
+  padding: var(--section-padding) 0;
+  /* Reveal-from-left/right items start 40px off to the side; clip them so they can never cause sideways scrolling */
+  overflow-x: clip;
+}
+
+.primary { background: var(--bg-primary); }
+.secondary { background: var(--bg-secondary); }

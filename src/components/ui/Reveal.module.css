@@ -1,0 +1,14 @@
+.reveal {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.up { transform: translateY(40px); }
+.left { transform: translateX(-40px); }
+.right { transform: translateX(40px); }
+
+/* Declared after the direction classes so it wins at equal specificity */
+.visible {
+  opacity: 1;
+  transform: none;
+}

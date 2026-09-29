@@ -1,0 +1,25 @@
+.list {
+  display: flex;
+  gap: var(--social-gap, 16px); /* hero uses 16px, footer sets --social-gap: 12px */
+  flex-wrap: wrap;
+}
+
+.link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  transition: all var(--transition-med);
+}
+
+.link:hover {
+  color: var(--blue-bright);
+  border-color: var(--blue-primary);
+  background: rgba(26, 111, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: var(--glow-blue);
+}

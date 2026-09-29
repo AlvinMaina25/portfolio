@@ -1,0 +1,36 @@
+.form { display: flex; flex-direction: column; gap: 20px; }
+
+.field { position: relative; display: flex; flex-direction: column; gap: 8px; }
+.field label { font-family: var(--font-mono); font-size: var(--fs-label-sm); letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-secondary); }
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  resize: vertical;
+}
+.field input:focus-visible,
+.field textarea:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; border-color: var(--border-bright); }
+
+/* Invalid state: set on the field wrapper, mirrored by aria-invalid on the control */
+.invalid input,
+.invalid textarea { border-color: #ff6b6b; }
+
+.error { font-size: 13px; color: #ff8a8a; }
+
+.counter { align-self: flex-end; font-family: var(--font-mono); font-size: var(--fs-label-sm); color: var(--text-secondary); }
+
+/* Honeypot: off-screen (not display:none, which some bots detect) */
+.trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* Live regions take no space while empty */
+.feedback:empty { display: none; }
+.feedback { padding: 14px 16px; border-radius: var(--radius-md); border: 1px solid transparent; font-size: 14px; line-height: 1.6; }
+.success { color: #26e87a; border-color: rgba(38, 232, 122, 0.4); background: rgba(38, 232, 122, 0.06); }
+.failure { color: #ff8a8a; border-color: rgba(255, 107, 107, 0.4); background: rgba(255, 107, 107, 0.06); }
+.fallback { display: inline-block; margin-top: 8px; color: var(--text-primary); text-decoration: underline; text-underline-offset: 3px; }
+.fallback:hover { color: var(--blue-bright); }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--
+    SEO / social metadata. Keep the wording in step with the hero in src/data/site.ts
+    (name, roles, heroIntro): metadata must describe what the visitor actually sees.
+    The production URL is written out here on purpose: crawlers and link-preview bots read this
+    file without running JavaScript, so it cannot be filled in from React.
+  -->
+  <title>Alvin Maina | Full-Stack &amp; AI Developer</title>
+  <meta name="description" content="Portfolio of Alvin Maina, a Computer Science graduate and developer in Kenya building full-stack, AI and security-focused software. Projects, skills and contact." />
+  <meta name="author" content="Alvin Maina" />
+  <link rel="canonical" href="https://alvinsolutions.co.ke/" />
+  <meta name="theme-color" content="#0a0a0f" />
+
+  <!-- Icon: public/favicon.svg. A 180x180 PNG apple-touch-icon is still needed (see CONTENT_REVIEW.md). -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alvinsolutions.co.ke/" />
+  <meta property="og:site_name" content="Alvin Maina" />
+  <meta property="og:title" content="Alvin Maina | Full-Stack &amp; AI Developer" />
+  <meta property="og:description" content="Portfolio of Alvin Maina, a Computer Science graduate and developer in Kenya building full-stack, AI and security-focused software. Projects, skills and contact." />
+  <!--
+    NO social preview image exists yet, so there is deliberately no og:image / twitter:image tag
+    (a tag pointing at a missing file only produces a broken preview). When you have one, put it in
+    public/ (recommended 1200x630, PNG or JPG, under 1 MB) and add:
+      <meta property="og:image" content="https://alvinsolutions.co.ke/og-image.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="(describe the image)" />
+      <meta name="twitter:image" content="https://alvinsolutions.co.ke/og-image.png" />
+    and change twitter:card below from "summary" to "summary_large_image".
+  -->
+
+  <!-- X / Twitter card (no twitter:site / twitter:creator: no verified handle exists) -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Alvin Maina | Full-Stack &amp; AI Developer" />
+  <meta name="twitter:description" content="Portfolio of Alvin Maina, a Computer Science graduate and developer in Kenya building full-stack, AI and security-focused software. Projects, skills and contact." />
+
+  <!--
+    Structured data: only facts that are on the page. `sameAs` repeats the GitHub and LinkedIn URLs from
+    src/data/site.ts (crawlers read this file without running JavaScript); change both places together.
+  -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Alvin Maina",
+      "url": "https://alvinsolutions.co.ke/",
+      "description": "Computer Science graduate and developer in Kenya building full-stack, AI and security-focused software."
+      "sameAs": [
+        "https://github.com/AlvinMaina25",
+        "https://www.linkedin.com/in/alvin-maina-2170522a8/"
+      ]
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@200;300;400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="root"></div>
+  <noscript>Alvin Maina, Full-Stack &amp; AI Developer. This portfolio needs JavaScript to display its content.</noscript>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

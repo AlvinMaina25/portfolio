@@ -1,0 +1,16 @@
+{
+  "title": "Analytics Dashboard",
+  "description": "A data analytics dashboard that combines several datasets, processes them in Python and shows KPIs in filterable charts, with data export.",
+  "category": "ai",
+  "badge": "Data Science",
+  "technologies": [
+    "Python",
+    "Pandas",
+    "SQL",
+    "Chart.js",
+    "FastAPI"
+  ],
+  "order": 40,
+  "icon": "art-data",
+  "liveUrl": "https://spiffy-vacherin-c43c42.netlify.app"
+}

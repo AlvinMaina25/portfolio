@@ -1,0 +1,14 @@
+{
+  "title": "AI Assistant",
+  "description": "A conversational assistant built on a large language model API, with its own memory management, context-aware replies and voice output. It is a progressive web app that can run on its own or be embedded as a widget.",
+  "category": "ai",
+  "technologies": [
+    "Python",
+    "OpenAI API",
+    "JavaScript",
+    "REST APIs",
+    "PWA"
+  ],
+  "order": 20,
+  "liveUrl": "https://lucent-gaufre-846ee6.netlify.app/"
+}

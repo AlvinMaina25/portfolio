@@ -1,0 +1,156 @@
+/* Ported from legacy/style.css (NAVIGATION + the 768px responsive block). */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  z-index: 1000;
+  transition:
+    background var(--transition-med),
+    border-color var(--transition-med),
+    box-shadow var(--transition-med);
+}
+
+.scrolled {
+  background: rgba(7, 7, 9, 0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--container-gutter);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: 2px;
+  transition: color var(--transition-fast);
+}
+
+.logo:hover { color: var(--blue-bright); }
+
+.bracket {
+  color: var(--blue-primary);
+  font-weight: 300;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.link {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background var(--transition-fast);
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 1px;
+  background: var(--blue-bright);
+  transition: width var(--transition-med);
+}
+
+.link:hover { color: var(--text-primary); }
+.link:hover::after,
+.link.active::after { width: 60%; }
+.link.active { color: var(--blue-bright); }
+
+/* Scroll-progress bar under the navbar (width is set from the `progress` prop) */
+.progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--gradient-brand);
+  transition: width 0.1s linear;
+}
+
+/* Menu button: hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-secondary);
+  border-radius: 2px;
+  transition: all var(--transition-med);
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  /* The mobile panel needs its own background even before the page has scrolled */
+  .navbar,
+  .scrolled {
+    background: rgba(7, 7, 9, 0.97);
+    /* A backdrop-filter here would also trap the fixed menu panel inside the header and stop it blurring */
+    backdrop-filter: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .links {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: rgba(7, 7, 9, 0.97);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px;
+    border-bottom: 1px solid var(--border-color);
+    transform: translateY(-100%);
+    opacity: 0;
+    /* visibility (unlike the legacy pointer-events trick) also removes the hidden links from the tab order */
+    visibility: hidden;
+    transition:
+      transform var(--transition-med),
+      opacity var(--transition-med),
+      visibility 0s linear 0.3s; /* wait for the slide-out before hiding */
+    gap: 4px;
+  }
+
+  .links.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+
+  .hamburger { display: flex; }
+}
