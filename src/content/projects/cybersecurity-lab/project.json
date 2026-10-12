@@ -10,6 +10,7 @@
     "VirtualBox"
   ],
   "order": 30,
+  "coverAlt": "Nexus Cyber Range threat operations dashboard with attack timeline, asset status and recent alerts",
   "liveUrl": "https://transcendent-sprinkles-230647.netlify.app/",
   "liveLabel": "Case Study"
 }

@@ -1,0 +1,20 @@
+{
+  "title": "Vitrine Supermarket",
+  "description": "A Kenyan online supermarket where customers search and browse products by category, fill a basket, choose delivery or pickup at checkout, and follow their orders. Built with React, TypeScript, TanStack Start and Supabase.",
+  "category": "fullstack",
+  "technologies": [
+    "React",
+    "TypeScript",
+    "TanStack Start",
+    "TanStack Router",
+    "TanStack Query",
+    "Supabase",
+    "PostgreSQL"
+  ],
+  "status": "completed",
+  "featured": true,
+  "coverAlt": "Vitrine Supermarket storefront with category navigation and a fresh produce banner",
+  "liveUrl": "https://vitrine-supermarket.auramotors.workers.dev/",
+  "githubUrl": "https://github.com/AlvinMaina25/Vitrine-Supermarket-App",
+  "liveLabel": "Live Demo"
+}

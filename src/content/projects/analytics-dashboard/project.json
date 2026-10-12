@@ -12,5 +12,6 @@
   ],
   "order": 40,
   "icon": "art-data",
+  "coverAlt": "Axiom analytics dashboard with date, category and region filters, KPI cards, and revenue, category and regional charts",
   "liveUrl": "https://spiffy-vacherin-c43c42.netlify.app"
 }
