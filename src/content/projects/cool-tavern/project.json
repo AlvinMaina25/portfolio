@@ -1,0 +1,20 @@
+
+{
+  "title": "Cool Tavern Hotel & Bar",
+  "description": "A modern, responsive hospitality website for Cool Tavern Hotel & Bar in Thika, Kenya, showcasing its restaurant, Kenyan cuisine, bar, guest accommodation, and event offerings. Built with React, TypeScript, Tailwind CSS, and Supabase, with a focus on premium design, mobile responsiveness, and a scalable foundation for future hospitality features.",
+  "category": "fullstack",
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "Supabase",
+    "PostgreSQL"
+  ],
+  "status": "in-progress",
+  "featured": true,
+  "coverAlt": "Cool Tavern Hotel & Bar hospitality website featuring Kenyan cuisine, bar experiences, and guest accommodation",
+  "liveUrl": "https://cool-tavern.mainadev.workers.dev/",
+  "githubUrl": "https://github.com/AlvinMaina25/cool-tavern.git",
+  "liveLabel": "Live Demo"
+}

@@ -14,7 +14,7 @@
   "status": "completed",
   "featured": true,
   "coverAlt": "Vitrine Supermarket storefront with category navigation and a fresh produce banner",
-  "liveUrl": "https://vitrine-supermarket.auramotors.workers.dev/",
+  "liveUrl": "https://vitrine-supermarket.mainadev.workers.dev/",
   "githubUrl": "https://github.com/AlvinMaina25/Vitrine-Supermarket-App",
   "liveLabel": "Live Demo"
 }
