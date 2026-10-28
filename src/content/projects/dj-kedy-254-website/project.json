@@ -1,20 +1,19 @@
+
 {
-  "title": "DJ Kedy 254 — Official Website",
-  "description": "A premium, responsive DJ artist website for DJ Kedy 254 (Newton Karish), featuring Mixcloud integration, a DJ mix library, event listings, and WhatsApp booking inquiries. Designed with a bold dark aesthetic and electric-red accents, optimized for mobile, accessibility, and SEO.",
-  "category": "frontend",
+  "title": "DJ Kedy 254 Website",
+  "description": "A responsive DJ artist website for DJ Kedy 254 (Newton Karish), featuring Mixcloud music embeds, a DJ mix library, event listings, and WhatsApp booking inquiries.",
+  "category": "fullstack",
   "technologies": [
     "React",
     "TypeScript",
     "Tailwind CSS",
     "Mixcloud Embed",
-    "WhatsApp Integration",
-    "Responsive Design",
-    "SEO"
+    "WhatsApp Integration"
   ],
   "status": "completed",
   "featured": true,
-  "coverAlt": "DJ Kedy 254 artist website featuring a premium dark design, red accents, music mixes, and booking options",
-  "liveUrl": "https://alvinmaina25-dj-kedy-254-website.mainadev.workers.dev",
   "githubUrl": "https://github.com/AlvinMaina25/dj-kedy-254-website",
-  "liveLabel": "Live Demo"
+  "liveUrl": "https://alvinmaina25-dj-kedy-254-website.mainadev.workers.dev",
+  "liveLabel": "Live Demo",
+  "coverAlt": "DJ Kedy 254 artist website featuring a dark theme, red accents, music mixes, and booking options"
 }
